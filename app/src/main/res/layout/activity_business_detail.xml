@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/include_toolbar"
+        layout="@layout/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout_business"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/include_toolbar"
+        android:background="@color/white">
+
+
+        <!--main screen dashboard items (Start)-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="-5dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true">
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cv_business_images"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="0dp"
+                        app:cardElevation="3dp"
+                        app:cardMaxElevation="3dp">
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_business_images_main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <ImageView
+                                android:id="@+id/iv_business_image_main"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:background="@drawable/boarder_imageview" />
+
+
+                            <RelativeLayout
+                                android:id="@+id/rl_change_main_business_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:background="@color/business_image_black_transparent">
+
+                                <TextView
+                                    android:id="@+id/tv_main_business_image"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:text="@string/text_change_main_business_image"
+                                    android:textColor="@color/whitee"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/iv_change_main_business_image"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/ic_change_image"
+                                    android:visibility="gone" />
+
+                            </RelativeLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_business_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="130dp"
+                                android:layout_below="@id/iv_business_image_main"
+                                android:baselineAligned="false"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@color/audio">
+
+                                    <ImageView
+                                        android:id="@+id/iv_business_image_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/boarder_imageview" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_change_business_image_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/business_image_black_transparent">
+
+                                        <ImageView
+                                            android:id="@+id/iv_change_business_image_2"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_centerInParent="true"
+                                            android:background="@drawable/ic_change_image"
+                                            android:visibility="gone" />
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@color/audio">
+
+
+                                    <ImageView
+                                        android:id="@+id/iv_business_image_3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/boarder_imageview" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_change_business_image_3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/business_image_black_transparent">
+
+                                        <ImageView
+                                            android:id="@+id/iv_change_business_image_3"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_centerInParent="true"
+                                            android:background="@drawable/ic_change_image"
+                                            android:visibility="gone" />
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@color/audio">
+
+                                    <ImageView
+                                        android:id="@+id/iv_business_image_4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/boarder_imageview" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_change_business_image_4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/business_image_black_transparent">
+
+                                        <ImageView
+                                            android:id="@+id/iv_change_business_image_4"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_centerInParent="true"
+                                            android:background="@drawable/ic_change_image"
+                                            android:visibility="gone" />
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                            <com.haozhang.lib.SlantedTextView
+                                android:id="@+id/stv_business_varify"
+                                android:layout_width="@dimen/text_height"
+                                android:layout_height="@dimen/text_height"
+                                android:layout_alignEnd="@+id/rl_change_main_business_image"
+                                android:layout_alignRight="@+id/rl_change_main_business_image"
+                                android:layout_alignTop="@+id/rl_change_main_business_image"
+                                android:layout_gravity="end"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                app:slantedBackgroundColor="@color/green"
+                                app:slantedLength="@dimen/text_slanted"
+                                app:slantedMode="right"
+                                app:slantedText="@string/business_verified_status"
+                                app:slantedTextColor="@color/white"
+                                app:slantedTextSize="12sp" />
+
+                            <com.haozhang.lib.SlantedTextView
+                                android:id="@+id/stv_business_not_varify"
+                                android:layout_width="@dimen/text_height"
+                                android:layout_height="@dimen/text_height"
+                                android:layout_alignEnd="@+id/rl_change_main_business_image"
+                                android:layout_alignRight="@+id/rl_change_main_business_image"
+                                android:layout_alignTop="@+id/rl_change_main_business_image"
+                                android:layout_gravity="end"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                app:slantedBackgroundColor="@color/red_varification"
+                                app:slantedLength="@dimen/text_slanted"
+                                app:slantedMode="right"
+                                app:slantedText="@string/business_not_verified_status"
+                                app:slantedTextColor="@color/white"
+                                app:slantedTextSize="12sp" />
+
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <include
+                        android:id="@+id/rl_business_content"
+                        layout="@layout/activity_business_detail_expandable_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cv_business_images"
+                        android:padding="10dp" />
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cv_create_business"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_business_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="50dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:visibility="gone"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp"
+                        app:cardMaxElevation="3dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_text_create_business"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_presse_effect_upload"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/textview_create_business_click"
+                                android:textColor="@color/whitee"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <TextView
+                        android:id="@+id/tv_text_no_package"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_business_content"
+                        android:layout_marginTop="50dp"
+                        android:gravity="center"
+                        android:text="You have no business package please create atleast one business Package"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cv_create_packagess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_text_no_package"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:visibility="gone"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp"
+                        app:cardMaxElevation="3dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_text_create_packagesss"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_presse_effect_upload"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/textview_create_package_click"
+                                android:textColor="@color/whitee"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rv_business_package_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_business_content"
+                        android:layout_marginBottom="10dp">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_business_packages"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp" />
+
+
+                    </RelativeLayout>
+
+                    <!--<com.rey.material.widget.FloatingActionButton-->
+                    <!--android:id="@+id/fab_chat"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="bottom|end"-->
+                    <!--android:layout_margin="10dp"-->
+                    <!--app:fab_backgroundAnimDuration="300"-->
+                    <!--app:fab_backgroundColor="@color/blue_pressed"-->
+                    <!--app:fab_elevation="6dp"-->
+                    <!--app:fab_iconSize="50dp"-->
+                    <!--app:fab_iconSrc="@drawable/ic_edit_packages" />-->
+
+
+                </RelativeLayout>
+
+
+            </ScrollView>
+
+            <!--<android.support.v7.widget.CardView-->
+            <!--android:id="@+id/cv_edit_business"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="10dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:background="?android:attr/selectableItemBackground"-->
+            <!--android:foreground="?android:attr/selectableItemBackground"-->
+            <!--android:visibility="go ne"-->
+            <!--app:cardCornerRadius="5dp"-->
+            <!--app:cardElevation="3dp"-->
+            <!--app:cardMaxElevation="3dp">-->
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_tv_edit_business"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/btn_presse_effect_upload"-->
+            <!--android:padding="10dp">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:text="@string/textview_edit_business_click"-->
+            <!--android:textColor="@color/whitee"-->
+            <!--android:textSize="15sp"-->
+            <!--android:textStyle="bold" />-->
+
+            <!--</RelativeLayout>-->
+
+            <!--</android.support.v7.widget.CardView>-->
+
+            <RelativeLayout
+                android:id="@+id/rl_fab_add_packages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp">
+
+                <!--<android.support.design.widget.FloatingActionButton-->
+                <!--android:id="@+id/fab_edit_business"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/ic_add_packagess"-->
+                <!--android:visibility="gone"-->
+                <!--app:backgroundTint="@color/redlight"-->
+                <!--app:borderWidth="0dp"-->
+                <!--android:scaleType="fitCenter"-->
+                <!--app:elevation="6dp"-->
+                <!--app:fabSize="mini" />-->
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_edit_business"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="16dp"
+                    android:src="@android:drawable/ic_menu_manage"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:fabSize="normal" />
+
+
+            </RelativeLayout>
+
+
+            <com.hlab.fabrevealmenu.view.FABRevealMenu
+                android:id="@+id/fabMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:animateItems="true"
+                app:menuBackgroundColor="@color/colorPrimaryDark"
+                app:menuDirection="left"
+                app:menuRes="@menu/menu_fab"
+                app:menuTitleTextColor="@color/colorWhite"
+                app:showOverlay="true"
+                app:showTitle="true" />
+
+
+        </FrameLayout>
+        <!--main screen dashboard items (End)-->
+
+
+        <!--left <drawer oppen items> -->
+        <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/white">
+
+            <!-- android:layout_gravity="start" -->
+            <include layout="@layout/drawer_layout" />
+
+        </RelativeLayout>
+        <!--left <drawer oppen items> -->
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</RelativeLayout>

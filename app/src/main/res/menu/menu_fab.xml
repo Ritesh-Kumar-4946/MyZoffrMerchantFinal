@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/grp1">
+        <item
+            android:id="@+id/menu_add_package"
+            android:checkable="true"
+            android:icon="@drawable/ic_add_packages"
+            android:title="@string/menu_add_package"
+            app:itemTextAppearance="@style/MenuItems"
+            app:showAsAction="always" />
+    </group>
+
+    <group android:id="@+id/grp2">
+        <item
+            android:id="@+id/menu_delete_all_package"
+            android:checkable="true"
+            android:icon="@drawable/ic_delete_all_packagess"
+            android:title="@string/menu_delete_all_business"
+            app:showAsAction="always" />
+
+    </group>
+
+    <group android:id="@+id/grp3">
+        <item
+            android:id="@+id/menu_edit_business"
+            android:checkable="true"
+            android:icon="@drawable/ic_edit_busine"
+            android:title="@string/menu_edit_business"
+            app:showAsAction="always" />
+
+    </group>
+    <!--<item-->
+    <!--android:id="@+id/menu_emoticon"-->
+    <!--android:icon="@drawable/ic_emoticon"-->
+    <!--android:title="Emoticon" />-->
+
+
+</menu>

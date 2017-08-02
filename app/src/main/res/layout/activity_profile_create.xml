@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    tool:context=".main_activities.ProfileCreateActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abl_create_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_create_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:elevation="7dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/white">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start">
+
+                <TextView
+                    android:id="@+id/toolbar_tv_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/toolbar_text_create_profile"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/abl_create_profile">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_main_create_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusableInTouchMode="true">
+
+            <RelativeLayout
+                android:id="@+id/rl_create_profile_image_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/edit_screen">
+
+
+                <!--background Hover effect and image (Start)-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_demo_bg_image" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/edit_background_black_transparent" />
+
+                </RelativeLayout>
+                <!--background Hover effect and image (End)-->
+
+
+                <!--profile image (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_create_profile_imageview"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/civ_create_profile_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/ic_profile_image_bg"
+                        android:elevation="10dp"
+                        app:civ_border_color="#FFFFFFFF"
+                        app:civ_border_width="2dp" />
+
+
+                </RelativeLayout>
+                <!--profile image (End)-->
+
+
+                <!--profile image edit(Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_create_profile_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="-40dp"
+                    android:layout_marginStart="-40dp"
+                    android:layout_toEndOf="@id/rl_create_profile_imageview"
+                    android:layout_toRightOf="@id/rl_create_profile_imageview">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_picker_imagee" />
+
+                </RelativeLayout>
+                <!--profile image edit(End)-->
+
+
+                <!--profile Content (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_merchant_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_create_profile_imageview"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_create_merchant_profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"
+                        android:padding="2dp"
+                        android:singleLine="true"
+                        android:text="@string/merchant_name"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+
+                    <TextView
+                        android:id="@+id/tv_create_merchant_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/tv_create_merchant_profile_name"
+                        android:maxLines="1"
+                        android:padding="2dp"
+                        android:singleLine="true"
+                        android:text="@string/merchant_email"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+
+                    <TextView
+                        android:id="@+id/tv_create_merchant_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/tv_create_merchant_email"
+                        android:maxLines="1"
+                        android:padding="2dp"
+                        android:singleLine="true"
+                        android:text="@string/merchant_mobile"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+
+                </RelativeLayout>
+                <!--profile Content (End)-->
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_create_profile_fields"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rl_create_profile_image_content"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_text_your_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="@string/text_create_profile"
+                    android:textColor="@color/red"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <!-- select main service city (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_create_profile_main_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_text_your_profile"
+                    android:layout_marginTop="20dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_text_main_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Select Service City *"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_main_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_create_profile_main_city"
+                    android:background="@color/white">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/mtspn_places"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/merchant_service_place_hint"
+                        android:textSize="15sp"
+                        app:ms_arrow_tint="@color/black"
+                        app:ms_dropdown_height="wrap_content"
+                        app:ms_dropdown_max_height="300dp"
+                        app:ms_hide_arrow="false"
+                        app:ms_text_color="@color/black" />
+
+
+                </RelativeLayout>
+                <!-- select main service city (End)-->
+
+
+                <!-- select area service city (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_sub_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_main_spinner"
+                    android:layout_marginTop="20dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Select Service Area *"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_sub_city_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_sub_city"
+                    android:background="@color/white">
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/mtspn_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/merchant_service_area_hint"
+                        android:textSize="15sp"
+                        app:ms_arrow_tint="@color/black"
+                        app:ms_dropdown_height="wrap_content"
+                        app:ms_dropdown_max_height="300dp"
+                        app:ms_hide_arrow="false"
+                        app:ms_text_color="@color/black" />
+
+
+                </RelativeLayout>
+                <!-- select area service city (End)-->
+
+
+                <!-- residential address (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_residential_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_sub_city_spinner"
+                    android:layout_marginTop="20dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_text_residential_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Residential Address *"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+
+                    <EditText
+                        android:id="@+id/edt_residential_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@id/tv_text_residential_add"
+                        android:background="@color/greyLight"
+                        android:backgroundTint="@color/greyLight"
+                        android:gravity="top|center_vertical"
+                        android:hint="Enter Address"
+                        android:inputType="textMultiLine"
+                        android:padding="15dp"
+                        android:textCursorDrawable="@drawable/cursor_size"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+                <!-- residential address (End)-->
+
+
+                <!-- office address (Start)-->
+                <RelativeLayout
+                    android:id="@+id/rl_office_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_residential_address"
+                    android:layout_marginTop="20dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_text_office_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="Office Address *"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+
+                    <EditText
+                        android:id="@+id/edt_office_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@id/tv_text_office_add"
+                        android:background="@color/greyLight"
+                        android:backgroundTint="@color/greyLight"
+                        android:gravity="top|center_vertical"
+                        android:hint="Enter Address"
+                        android:inputType="textMultiLine"
+                        android:padding="15dp"
+                        android:textCursorDrawable="@drawable/cursor_size"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+                <!-- office address (End)-->
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_create_profile_pan_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_office_address"
+                    android:layout_marginTop="15dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp"
+                    app:cardMaxElevation="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_text_create_pan_card"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Pan Card *"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_create_pan_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_below="@id/tv_text_create_pan_card"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone" />
+
+                        <ProgressBar
+                            android:id="@+id/pb_pan_card"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/tv_text_create_pan_card"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="25dp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_btn_pan_card"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_create_pan_card"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="30dp">
+
+
+                            <RelativeLayout
+                                android:id="@+id/rl_pan_card"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:gravity="center">
+
+                                <Button
+                                    android:id="@+id/btn_browse_pan_card"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/btn_presse_effect_upload"
+                                    android:elevation="3dp"
+                                    android:shadowColor="#1499A8"
+                                    android:shadowDx="0"
+                                    android:shadowDy="0"
+                                    android:shadowRadius="5"
+                                    android:text="@string/text_browse"
+                                    android:textAllCaps="false"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15sp"
+                                    android:theme="@style/Widget.AppCompat.Button.Colored" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_pan_card_image"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginRight="20dp">
+
+                                <ImageView
+                                    android:id="@+id/btn_pan_card_image"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/ic_arrow" />
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_create_profile_adhar_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cv_create_profile_pan_card"
+                    android:layout_marginTop="15dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp"
+                    app:cardMaxElevation="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_text_adhar_card"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Aadhaar/Voter Card *"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_create_adhar_voter_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_below="@id/tv_text_adhar_card"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_btn_adhar_voter_card"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_create_adhar_voter_image"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp">
+
+
+                            <RelativeLayout
+                                android:id="@+id/rl_adhar_card"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:gravity="center">
+
+                                <Button
+                                    android:id="@+id/btn_browse_adhar_card"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/btn_presse_effect_upload"
+                                    android:elevation="3dp"
+                                    android:shadowColor="#1499A8"
+                                    android:shadowDx="0"
+                                    android:shadowDy="0"
+                                    android:shadowRadius="5"
+                                    android:text="@string/text_browse"
+                                    android:textAllCaps="false"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15sp"
+                                    android:theme="@style/Widget.AppCompat.Button.Colored" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_adhar_card_image"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginRight="20dp">
+
+                                <ImageView
+                                    android:id="@+id/btn_adhar_card_image"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/ic_arrow" />
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_create_profile_qualification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cv_create_profile_adhar_card"
+                    android:layout_marginTop="15dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp"
+                    app:cardMaxElevation="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_text_qualification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Highest Qualification *"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_create_highest_qualification"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_below="@id/tv_text_qualification"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_btn_create_qualification"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_create_highest_qualification"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp">
+
+
+                            <RelativeLayout
+                                android:id="@+id/rl_qualification"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:gravity="center">
+
+                                <Button
+                                    android:id="@+id/btn_browse_qualification"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/btn_presse_effect_upload"
+                                    android:elevation="3dp"
+                                    android:shadowColor="#1499A8"
+                                    android:shadowDx="0"
+                                    android:shadowDy="0"
+                                    android:shadowRadius="5"
+                                    android:text="@string/text_browse"
+                                    android:textAllCaps="false"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15sp"
+                                    android:theme="@style/Widget.AppCompat.Button.Colored" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_qualification_image"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginRight="20dp">
+
+                                <ImageView
+                                    android:id="@+id/btn_qualifications_image"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/ic_arrow" />
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_create_profile_latest_address_proof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cv_create_profile_qualification"
+                    android:layout_marginTop="15dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp"
+                    app:cardMaxElevation="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_text_latest_address_proof"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Latest Address Proof *"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_create_profile_latest_address_proof"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_below="@id/tv_text_latest_address_proof"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_btn_latest_address_proof"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_create_profile_latest_address_proof"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp">
+
+
+                            <RelativeLayout
+                                android:id="@+id/rl_voter_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:gravity="center">
+
+                                <Button
+                                    android:id="@+id/btn_browse_voter_id"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/btn_presse_effect_upload"
+                                    android:elevation="3dp"
+                                    android:shadowColor="#1499A8"
+                                    android:shadowDx="0"
+                                    android:shadowDy="0"
+                                    android:shadowRadius="5"
+                                    android:text="@string/text_browse"
+                                    android:textAllCaps="false"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15sp"
+                                    android:theme="@style/Widget.AppCompat.Button.Colored" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_voter_id_image"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginRight="20dp">
+
+                                <ImageView
+                                    android:id="@+id/btn_voter_id_image"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/ic_arrow" />
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_create_profile_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cv_create_profile_latest_address_proof"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginTop="50dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/red"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp"
+                    app:cardMaxElevation="3dp">
+
+                    <TextView
+                        android:id="@+id/tv_create_profile_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/btn_create_profile"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

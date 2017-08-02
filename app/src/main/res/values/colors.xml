@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e53324</color>
+    <color name="primary">#e53324</color>
+    <color name="colorPrimaryDark">#cd2718</color>
+    <color name="colorAccentFab">#3F51B5</color>
+    <!--<color name="colorAccent">#000000</color>-->
+    <color name="colorAccent">#00796B</color>
+    <color name="blue_pressed">#ff0099cc</color>
+    <color name="accent">#FF4081</color>
+
+    <color name="primary_dark">#00796B</color>
+    <color name="login_email">#CD2228</color>
+    <color name="red">#ea1502</color>
+    <color name="reddark">#b30f00</color>
+    <color name="reddarkest">#560902</color>
+    <color name="redlight">#ff5748</color>
+    <color name="white">#FFFFFF</color>
+    <color name="whitee">#FFFFFF</color>
+    <color name="whiteTransparent">#a8ffffff</color>
+    <color name="black">#000000</color>
+    <color name="business_image_black_transparent">#64000000</color>
+    <color name="edit_background_black_transparent">#b4000000</color>
+    <color name="grey">#808080</color>
+    <color name="greyLight">#dadada</color>
+    <color name="permission_hover_bg">#b0514f4f</color>
+    <color name="LightgreyBackground">#eae8e8</color>
+    <color name="greyTransparent">#95535050</color>
+    <color name="green">#ae039305</color>
+    <color name="greenlight">#2bd72e</color>
+    <color name="green_varification">#ae039305</color>
+    <color name="red_varification">#aeea1502</color>
+    <color name="edit_screen">#FF289604</color>
+    <color name="main_color">#008B4B</color>
+    <color name="main_color_dark">#01743F</color>
+
+    <!--login signup screen color (Start)-->
+    <color name="colorPrimaryTrans">#a0784bc9</color>
+    <color name="colorAccentTrans">#a000c9b6</color>
+    <color name="colorBlackTrans">#7e000000</color>
+    <!--login signup screen color (End)-->
+
+
+    <!--Main activity colors Drawer(Start)-->
+    <color name="corsoulTextColor">#c95dd681</color>
+    <color name="drawer_click_effect">#8ccc77</color>
+    <!--Main activity colors Drawer (End)-->
+
+
+    <color name="album_title">#4c4c4c</color>
+
+
+    <color name="guillotine_background">#444153</color>
+    <color name="guillotine_background_dark">#383547</color>
+    <color name="selected_item_color">#30d1d5</color>
+
+
+    <!--fab color (Start)-->
+
+
+    <color name="widnow_background">#ffff</color>
+
+    <color name="chat">#559fca</color>
+    <color name="quote">#f0983c</color>
+    <color name="link">#5abb8b</color>
+    <color name="audio">#a67fc0</color>
+    <color name="photo">#d75f45</color>
+    <color name="text">#444444</color>
+    <color name="video">#748089</color>
+
+    <color name="fab">#529ecc</color>
+
+    <color name="text_color">#949ca8</color>
+
+
+    <color name="colorPrimaryLight">#CFD8DC</color>
+    <color name="colorCard">#F5F5F5</color>
+    <color name="colorPrimaryCard">#607D8B</color>
+    <color name="colorPrimaryDarkCard">#455A64</color>
+    <color name="colorAccentCard">#FF5252</color>
+    <color name="colorDivider">#B6B6B6</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#727272</color>
+
+
+    <!--fab color (End)-->
+</resources>

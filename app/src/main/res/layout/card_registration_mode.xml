@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    card_view:cardBackgroundColor="@color/colorCard"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="7dp"
+    card_view:cardPreventCornerOverlap="true"
+    card_view:cardUseCompatPadding="true">
+
+
+    <ScrollView
+        android:id="@+id/sv_account_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/abl_payment_selection"
+        android:clickable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/StyleCardTitle"
+                android:text="Select account mode" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_account_type_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_select_account_type_text"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="A/c type :"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_account_type_free"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/tv_select_account_type_text"
+                    android:layout_toRightOf="@id/tv_select_account_type_text"
+                    android:background="@color/greyLight"
+                    android:backgroundTint="@color/greyLight"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:text="Free"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textCursorDrawable="@drawable/cursor_size"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_account_type_paid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/tv_account_type_free"
+                    android:layout_toRightOf="@id/tv_account_type_free"
+                    android:background="@color/reddark"
+                    android:paddingBottom="12dp"
+                    android:paddingEnd="18dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingStart="18dp"
+                    android:paddingTop="12dp"
+                    android:text="Paid"
+                    android:textColor="@color/whitee"
+                    android:textColorHint="@color/grey"
+                    android:textCursorDrawable="@drawable/cursor_size"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_sales_code_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/rl_exe_id_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_text_sales_exe_id"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Exe. :"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/edt_sales_exe_id"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/tv_text_sales_exe_id"
+                        android:layout_toRightOf="@id/tv_text_sales_exe_id"
+                        android:background="@color/greyLight"
+                        android:backgroundTint="@color/greyLight"
+                        android:hint="@string/edt_hint_sales_exe_code_id"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:textCursorDrawable="@drawable/cursor_size"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_exe_code_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_text_sales_exe_code"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Confirm :"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/edt_sales_exe_code"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/tv_text_sales_exe_code"
+                        android:layout_toRightOf="@id/tv_text_sales_exe_code"
+                        android:background="@color/greyLight"
+                        android:backgroundTint="@color/greyLight"
+                        android:hint="@string/edt_hint_sales_exe_code_id"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:textCursorDrawable="@drawable/cursor_size"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_btn_get_sales_person_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_btn_get_sales_person_done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/textview_rounded_corner"
+                        android:paddingBottom="15dp"
+                        android:paddingEnd="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="15dp"
+                        android:text="Done"
+                        android:textColor="@color/whitee"
+                        android:textCursorDrawable="@drawable/cursor_size"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_get_sales_person_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/rl_sales_person_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <!-- <TextView
+                         android:id="@+id/tv_text_sales_person_name"
+                         android:layout_width="100dp"
+                         android:layout_height="wrap_content"
+                         android:layout_centerVertical="true"
+                         android:text="Name :"
+                         android:textSize="15sp" />-->
+
+                    <RelativeLayout
+                        android:id="@+id/rl_iv_sales_person_image"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_sales_person_image"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/ic_profile_image_bg"
+                            app:civ_border_color="@color/redlight"
+                            app:civ_border_width="2dp" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_sales_person_name"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/rl_iv_sales_person_image"
+                        android:layout_toRightOf="@id/rl_iv_sales_person_image"
+                        android:background="@color/greyLight"
+                        android:backgroundTint="@color/greyLight"
+                        android:hint="@string/tv_hint_sales_person_name"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:textCursorDrawable="@drawable/cursor_size"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_sales_person_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_text_sales_person_phone_number"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Contact No.:"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sales_person_phone_number"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/tv_text_sales_person_phone_number"
+                        android:layout_toRightOf="@id/tv_text_sales_person_phone_number"
+                        android:background="@color/greyLight"
+                        android:backgroundTint="@color/greyLight"
+                        android:hint="@string/tv_hint_sales_exe_contact_no"
+                        android:maxLength="10"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:textCursorDrawable="@drawable/cursor_size"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_sales_person_email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_text_sales_person_emp_id"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="ID:"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sales_person_emp_id"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/tv_text_sales_person_emp_id"
+                        android:layout_toRightOf="@id/tv_text_sales_person_emp_id"
+                        android:background="@color/greyLight"
+                        android:backgroundTint="@color/greyLight"
+                        android:hint="@string/tv_hint_sales_exe_emp_id"
+                        android:maxLength="50"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:textCursorDrawable="@drawable/cursor_size"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_payment_type_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_select_payment_type_text"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="A/c type :"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_btn_payment_type_cheque"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/tv_select_payment_type_text"
+                        android:layout_toRightOf="@id/tv_select_payment_type_text"
+                        android:background="@color/reddark"
+                        android:paddingBottom="10dp"
+                        android:paddingEnd="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingTop="10dp"
+                        android:text="Cheque"
+                        android:textColor="@color/whitee"
+                        android:textCursorDrawable="@drawable/cursor_size"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_btn_payment_type_cash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/tv_btn_payment_type_cheque"
+                        android:layout_toRightOf="@id/tv_btn_payment_type_cheque"
+                        android:background="@color/reddark"
+                        android:paddingBottom="10dp"
+                        android:paddingEnd="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingStart="15dp"
+                        android:paddingTop="10dp"
+                        android:text="Cash"
+                        android:textColor="@color/whitee"
+                        android:textColorHint="@color/grey"
+                        android:textCursorDrawable="@drawable/cursor_size"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_cheque_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_cheque_detail_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_text_cheque_no"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Cheque No.:"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/edt_cheque_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@id/tv_text_cheque_no"
+                            android:layout_toRightOf="@id/tv_text_cheque_no"
+                            android:background="@color/greyLight"
+                            android:backgroundTint="@color/greyLight"
+                            android:hint="@string/edt_hint_cheque_no"
+                            android:inputType="textMultiLine"
+                            android:maxLength="20"
+                            android:padding="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/grey"
+                            android:textCursorDrawable="@drawable/cursor_size"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_cheque_cash_amt_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_text_cheque_cash_amt"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Amount:"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/edt_cheque_cash_amt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@id/tv_text_cheque_cash_amt"
+                            android:layout_toRightOf="@id/tv_text_cheque_cash_amt"
+                            android:background="@color/greyLight"
+                            android:backgroundTint="@color/greyLight"
+                            android:digits="@string/numeric"
+                            android:hint="@string/edt_hint_amount"
+                            android:inputType="number"
+                            android:maxLength="20"
+                            android:padding="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/grey"
+                            android:textCursorDrawable="@drawable/cursor_size"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_cheque_cash_amt_confirm_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_text_cheque_cash_amt_confirm"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Conf. Amt:"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/edt_cheque_cash_amt_confirm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@id/tv_text_cheque_cash_amt_confirm"
+                            android:layout_toRightOf="@id/tv_text_cheque_cash_amt_confirm"
+                            android:background="@color/greyLight"
+                            android:backgroundTint="@color/greyLight"
+                            android:digits="@string/numeric"
+                            android:hint="@string/edt_hint_amount"
+                            android:inputType="number"
+                            android:maxLength="20"
+                            android:padding="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/grey"
+                            android:textCursorDrawable="@drawable/cursor_size"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/StyleCardTitle"
+                            android:text="Cheque Dated" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_package_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp">
+
+                            <devs.mulham.horizontalcalendar.HorizontalCalendarView
+                                android:id="@+id/calendarView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/red"
+                                app:textColorSelected="@color/whitee"
+                                app:textSizeDayName="14sp"
+                                app:textSizeDayNumber="20sp" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_cheque_date_selected_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingStart="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_text_tv_text_cheque_dated_selected"
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Dated :"
+                                android:textSize="15sp" />
+
+
+                            <TextView
+                                android:id="@+id/tv_cheque_dated_selected"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@id/tv_text_tv_text_cheque_dated_selected"
+                                android:layout_toRightOf="@id/tv_text_tv_text_cheque_dated_selected"
+                                android:background="@color/greyLight"
+                                android:backgroundTint="@color/greyLight"
+                                android:hint="@string/tv_hint_checked_selected_date"
+                                android:padding="10dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/grey"
+                                android:textCursorDrawable="@drawable/cursor_size"
+                                android:textSize="15sp" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_btn_submit_paid_cheue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_btn_submit_paid_cheque"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/textview_rounded_corner"
+                            android:paddingBottom="15dp"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            android:paddingTop="15dp"
+                            android:text="Submit"
+                            android:textColor="@color/whitee"
+                            android:textCursorDrawable="@drawable/cursor_size"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <!--
+                                        <TextView
+                                            android:id="@+id/tv_text_or"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginEnd="10dp"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginRight="10dp"
+                                            android:layout_marginStart="10dp"
+                                            android:gravity="center"
+                                            android:textColor="@color/reddark"
+                                            android:layout_marginTop="50dp"
+                                            android:text="Or"
+                                            android:textSize="25sp" />-->
+
+
+                    <!--<RelativeLayout
+                        android:id="@+id/rl_for_paid_account_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+
+                        <TextView
+                            android:id="@+id/tv_text_for_paid_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginStart="10dp"
+                            android:gravity="center"
+                            android:text="If you want paid account please mail us from below"
+                            android:textSize="18sp" />
+
+
+                        <TextView
+                            android:id="@+id/tv_btn_mail_us_paid_account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_text_for_paid_account"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/textview_rounded_corner"
+                            android:paddingBottom="15dp"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            android:paddingTop="15dp"
+                            android:text="@string/text_mail_us_id"
+                            android:textColor="@color/whitee"
+                            android:textCursorDrawable="@drawable/cursor_size"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>-->
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_cash_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_cash_detail_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_text_cash"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Amount:"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/edt_cash"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@id/tv_text_cash"
+                            android:layout_toRightOf="@id/tv_text_cash"
+                            android:background="@color/greyLight"
+                            android:backgroundTint="@color/greyLight"
+                            android:digits="@string/numeric"
+                            android:hint="@string/edt_hint_amount"
+                            android:inputType="number"
+                            android:maxLength="20"
+                            android:padding="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/grey"
+                            android:textCursorDrawable="@drawable/cursor_size"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_cash_confirm_detail_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_text_cash_confirm"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Conf. Amt:"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/edt_cash_confirm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@id/tv_text_cash_confirm"
+                            android:layout_toRightOf="@id/tv_text_cash_confirm"
+                            android:background="@color/greyLight"
+                            android:backgroundTint="@color/greyLight"
+                            android:digits="@string/numeric"
+                            android:hint="@string/edt_hint_amount"
+                            android:inputType="number"
+                            android:maxLength="20"
+                            android:padding="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/grey"
+                            android:textCursorDrawable="@drawable/cursor_size"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_btn_submit_paid_cash"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_btn_submit_paid_cash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/textview_rounded_corner"
+                            android:paddingBottom="15dp"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            android:paddingTop="15dp"
+                            android:text="Submit"
+                            android:textColor="@color/whitee"
+                            android:textCursorDrawable="@drawable/cursor_size"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_btn_submit_free"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_btn_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/textview_rounded_corner_free"
+                    android:paddingBottom="15dp"
+                    android:paddingEnd="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp"
+                    android:text="Submit"
+                    android:textColor="@color/whitee"
+                    android:textCursorDrawable="@drawable/cursor_size"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</android.support.v7.widget.CardView>

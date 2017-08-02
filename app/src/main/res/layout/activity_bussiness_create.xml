@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abl_create_business"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_create_business"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:elevation="7dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/white">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/toolbar_text_create_business"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/abl_create_business">
+
+        <RelativeLayout
+            android:id="@+id/rl_main_scroll_create_business"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:padding="10dp">
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_business_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="3dp"
+                app:cardMaxElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_text_business_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Business Name"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_business_name_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_text_business_name"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_text_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4">
+
+                            <EditText
+                                android:id="@+id/etCounter_business_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@color/greyLight"
+                                android:backgroundTint="@color/greyLight"
+                                android:ems="10"
+                                android:gravity="top|center_vertical"
+                                android:hint="Enter text"
+                                android:inputType="textMultiLine"
+                                android:padding="15dp"
+                                android:textCursorDrawable="@drawable/cursor_size"
+                                android:textSize="15sp" />
+
+
+                            <com.wafflecopter.charcounttextview.CharCountTextView
+                                android:id="@+id/tvCounter_business_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@id/etCounter_business_name"
+                                app:exceededTextColor="@color/red"
+                                app:maxCharacters="50" />
+
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btn_set_business_name"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:elevation="7dp"
+                            android:shadowColor="#1499A8"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="5"
+                            android:text="@string/text_set"
+                            android:textAllCaps="false"
+                            android:textColor="@color/whitee"
+                            android:textSize="18sp"
+                            android:theme="@style/Widget.AppCompat.Button.Colored"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_text_business_short_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_business_name_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Business Tag Line"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_business_shortname_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_text_business_short_name"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_text_shortname_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4">
+
+                            <EditText
+                                android:id="@+id/etCounter_business_shortname"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:background="@color/greyLight"
+                                android:backgroundTint="@color/greyLight"
+                                android:ems="10"
+                                android:gravity="top|center_vertical"
+                                android:hint="Enter text"
+                                android:inputType="textMultiLine"
+                                android:padding="15dp"
+                                android:textCursorDrawable="@drawable/cursor_size"
+                                android:textSize="15sp" />
+
+
+                            <com.wafflecopter.charcounttextview.CharCountTextView
+                                android:id="@+id/tvCounter_business_shortname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@id/etCounter_business_shortname"
+                                app:exceededTextColor="@color/red"
+                                app:maxCharacters="50" />
+
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btn_set_business_shortname"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:elevation="7dp"
+                            android:shadowColor="#1499A8"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="5"
+                            android:text="@string/text_set"
+                            android:textAllCaps="false"
+                            android:textColor="@color/whitee"
+                            android:textSize="18sp"
+                            android:theme="@style/Widget.AppCompat.Button.Colored"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_text_business_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_business_shortname_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Business Description"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_business_description_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_text_business_description"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_text_description_content"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4">
+
+                            <EditText
+                                android:id="@+id/etCounter_business_description"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:background="@color/greyLight"
+                                android:backgroundTint="@color/greyLight"
+                                android:ems="10"
+                                android:gravity="top|center_vertical"
+                                android:hint="Enter text"
+                                android:inputType="textMultiLine"
+                                android:padding="15dp"
+                                android:textCursorDrawable="@drawable/cursor_size"
+                                android:textSize="15sp" />
+
+
+                            <com.wafflecopter.charcounttextview.CharCountTextView
+                                android:id="@+id/tvCounter_business_description"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@id/etCounter_business_description"
+                                app:exceededTextColor="@color/red"
+                                app:maxCharacters="300" />
+
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btn_set_business_description"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:elevation="7dp"
+                            android:shadowColor="#1499A8"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="5"
+                            android:text="@string/text_set"
+                            android:textAllCaps="false"
+                            android:textColor="@color/whitee"
+                            android:textSize="18sp"
+                            android:theme="@style/Widget.AppCompat.Button.Colored"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_business_main_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_business_content"
+                android:layout_marginTop="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="3dp"
+                app:cardMaxElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_text_business_main_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Business Main Image"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_business_main_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@id/tv_text_business_main_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/pb_business_main_image"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/tv_text_business_main_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:visibility="gone" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_btn_business_main_image"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_business_main_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp">
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_business_main_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/btn_browse_business_main_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_presse_effect_upload"
+                                android:elevation="3dp"
+                                android:shadowColor="#1499A8"
+                                android:shadowDx="0"
+                                android:shadowDy="0"
+                                android:shadowRadius="5"
+                                android:text="@string/text_browse"
+                                android:textAllCaps="false"
+                                android:textColor="#ffffff"
+                                android:textSize="18sp"
+                                android:theme="@style/Widget.AppCompat.Button.Colored" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_business_main_image_image"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginRight="20dp">
+
+                            <ImageView
+                                android:id="@+id/btn_business_main_image_image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow" />
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_business_2_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_business_main_image"
+                android:layout_marginTop="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="3dp"
+                app:cardMaxElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_text_business_2_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Second Image"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_business_2_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@id/tv_text_business_2_image"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_btn_business_2_image"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_business_2_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp">
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_business_2_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/btn_browse_business_2_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_presse_effect_upload"
+                                android:elevation="3dp"
+                                android:shadowColor="#1499A8"
+                                android:shadowDx="0"
+                                android:shadowDy="0"
+                                android:shadowRadius="5"
+                                android:text="@string/text_browse"
+                                android:textAllCaps="false"
+                                android:textColor="#ffffff"
+                                android:textSize="18sp"
+                                android:theme="@style/Widget.AppCompat.Button.Colored" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_business_2_image_image"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginRight="20dp">
+
+                            <ImageView
+                                android:id="@+id/btn_business_2_image_image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow" />
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_business_3_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_business_2_image"
+                android:layout_marginTop="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="3dp"
+                app:cardMaxElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_business_3_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Third Image"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_business_3_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@id/tv_business_3_image"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_btn_business_3_image"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_business_3_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp">
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_business_3_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/btn_browse_business_3_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_presse_effect_upload"
+                                android:elevation="3dp"
+                                android:shadowColor="#1499A8"
+                                android:shadowDx="0"
+                                android:shadowDy="0"
+                                android:shadowRadius="5"
+                                android:text="@string/text_browse"
+                                android:textAllCaps="false"
+                                android:textColor="#ffffff"
+                                android:textSize="18sp"
+                                android:theme="@style/Widget.AppCompat.Button.Colored" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_business_3_image_image"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginRight="20dp">
+
+                            <ImageView
+                                android:id="@+id/btn_business_3_image_image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow" />
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_business_4_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_business_3_image"
+                android:layout_marginTop="15dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="3dp"
+                app:cardMaxElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_text_business_4_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Fourth Image"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_business_4_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@id/tv_text_business_4_image"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_btn_business_4_image"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_business_4_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp">
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_business_4_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/btn_browse_business_4_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_presse_effect_upload"
+                                android:elevation="3dp"
+                                android:shadowColor="#1499A8"
+                                android:shadowDx="0"
+                                android:shadowDy="0"
+                                android:shadowRadius="5"
+                                android:text="@string/text_browse"
+                                android:textAllCaps="false"
+                                android:textColor="#ffffff"
+                                android:textSize="18sp"
+                                android:theme="@style/Widget.AppCompat.Button.Colored" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_business_4_image_image"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginRight="20dp">
+
+                            <ImageView
+                                android:id="@+id/btn_business_4_image_image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/ic_arrow" />
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_go_business"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_business_4_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="50dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/red"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="3dp"
+                app:cardMaxElevation="3dp">
+
+                <TextView
+                    android:id="@+id/tv_create_business_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/text_btn_create_new_business"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,180 @@
+<resources>
+    <string name="app_name">Zoffr Business</string>
+
+    <!--splash screen text (Start)-->
+    <string name="splash_z_logo">Zoffr Z Logo</string>
+    <!--splash screen text (End)-->
+
+    <!--login signup screen text (Start)-->
+    <string name="edt_login_user_name">User Name</string>
+    <string name="useremail_text">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890.,_^-@#$=+()&amp;%`~*{}[]:;&lt;&gt;</string>
+    <string name="edt_login_email">Email</string>
+    <string name="edt_mobile_number">Mobile Number</string>
+    <string name="edt_login_password">Password</string>
+    <string name="edt_old_password">Old Password</string>
+    <string name="edt_new_password">New Password</string>
+    <string name="edt_confirm_new_password">Confirm New Password</string>
+    <string name="edt_confirm_password">Confirm Password</string>
+    <string name="singup_button">Signup</string>
+    <string name="new_account_text">New Member?</string>
+    <string name="already_account_text">Already have an account.</string>
+    <string name="forgot_password_text">Forgot Password</string>
+    <string name="singin_button">Signin</string>
+    <string name="login_text">Login</string>
+    <string name="numeric">1234567890</string>
+    <string name="text_yes_no">YESNO</string>
+    <string name="text_quantity">Quantity valid for</string>
+    <string name="text_days">Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday </string>
+    <string name="dialog_string">dialog</string>
+    <!--login signup screen text (End)-->
+
+
+    <!--drawer text (Start)-->
+    <string name="business_verified_status">Verified Business</string>
+    <string name="business_not_verified_status">Verification Pending</string>
+    <string name="txt_or">Or</string>
+    <string name="signup_below">New to Zoffr signup here.</string>
+    <string name="drawer_verified_status">Verified by Zoffr</string>
+    <string name="drawer_not_verified_status">Not Verified by Zoffr</string>
+    <string name="string_dialog_not_verified_status">You are not verified by Zoffr please update your profile to get Varified by Zoffr</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="drawer_my_order">My Payment</string>
+    <!--drawer text (End)-->
+
+
+    <!--Main screen text (Start)-->
+    <string name="text_browse">Browse</string>
+    <string name="text_set">Set</string>
+    <string name="toolbar_text_edit_profile">Edit Your Profile </string>
+    <string name="toolbar_text_edit_profile_detail">Edit Your Profile Detail</string>
+    <string name="toolbar_text_create_profile">Create your Profile</string>
+    <string name="toolbar_text_get_profile">Your Profile</string>
+    <string name="toolbar_text_business_detail">Business Detail</string>
+    <string name="toolbar_text_help_support">Help &amp; Support </string>
+    <string name="toolbar_text_create_business">Create Business </string>
+    <string name="toolbar_text_edit_business">Edit Business</string>
+    <string name="toolbar_text_payment_selection">Account Mode</string>
+    <string name="toolbar_text_create_business_packages">Create Business Packages</string>
+    <string name="toolbar_text_change_password">Change Password</string>
+    <string name="text_mail_us">mail us query on</string>
+    <string name="text_mail_us_id">support@zoffr.in</string>
+    <string name="toolbar_text_sub_category_selection">Business Category</string>
+    <string name="merchant_name">Merchant Name </string>
+    <string name="merchant_type">Merchant Type </string>
+    <string name="merchant_mobile">Merchant Mobile </string>
+    <string name="merchant_email">Merchant Email </string>
+    <string name="merchant_working_place">Merchant Work Place </string>
+    <string name="text_edit_profile">Edit Profile </string>
+    <string name="text_get_profile">Your Profile </string>
+    <string name="text_create_profile">Create Profile </string>
+    <string name="login_email_user">Email Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="btn_update">Update</string>
+    <string name="btn_create_profile">Create Profile</string>
+    <string name="btn_manage_business">List Your Business</string>
+    <string name="btn_send_query">Submit</string>
+    <string name="edt_hint_package_name">Package Name</string>
+    <string name="edt_hint_cheque_no">Cheque Number</string>
+    <string name="edt_hint_amount">Enter Amount</string>
+    <string name="edt_hint_cheque_date">Cheque Date</string>
+    <string name="tv_hint_sales_exe_contact_no">Contact Number</string>
+    <string name="tv_hint_sales_exe_emp_id">Emp id</string>
+    <string name="edt_hint_sales_exe_code_id">Enter</string>
+    <string name="edt_hint_package_detail">Package Detail</string>
+    <string name="text_quantity_valid_for">Qty :- </string>
+    <string name="text_quantity_valid_zero">00</string>
+    <string name="roboto_light">sans-serif-light</string>
+    <string name="number_picker_formatter">%02d</string>
+    <string name="edt_hint_package_price">Offer Price</string>
+    <string name="edt_hint_package_old_price">Regular Price</string>
+    <string name="edt_hint_package_availbale">Yes/No</string>
+    <string name="edt_hint_package_validity_from">30/07/2017</string>
+    <string name="text_hint_date_range">Set Date range</string>
+    <string name="edt_hint_package_validity_to">15/08/2017</string>
+    <string name="edt_hint_package_time_from">Set start timehere</string>
+    <string name="tv_hint_sales_person_name">Name</string>
+    <string name="tv_hint_checked_selected_date">Date</string>
+    <string name="edt_hint_package_time_to">Set end time</string>
+    <string name="dialog_banner_textview">Choose Image From</string>
+    <string name="dialog_banner_change_password_textview">Change Password</string>
+    <string name="dialog_camera_textview">Camera</string>
+    <string name="dialog_gallery_textview">Gallery</string>
+    <string name="dialog_cancel_textview">Cancel</string>
+    <string name="dialog_ok_textview">OK</string>
+    <string name="textview_change_password_click">Change Password</string>
+    <string name="textview_continue_click">Confirm</string>
+    <string name="textview_edit_business_click">Edit</string>
+    <string name="textview_create_business_click">Create Business</string>
+    <string name="textview_create_package_click">Create Package</string>
+    <string name="textview_update_business_click">Update Business</string>
+    <string name="merchant_service_place_hint">Select City</string>
+    <string name="merchant_service_area_hint">Select Area</string>
+    <string name="text_select_business_category">Business Category</string>
+    <!--Main screen text (End)-->
+
+
+    <!--permission text (Start)-->
+    <string name="text_camera">Camera Permission</string>
+    <string name="text_camera_description">This helps you for setting up your profile and upload documents with us.
+        If not allowed app may not work properly.</string>
+    <string name="text_camera_dialog_description">App need this functionality for taking picture for update your
+        profile and many more beautiful functionality. If not allowed app may not work properly</string>
+
+
+    <string name="text_external_storage">Storage Read/Write Permission</string>
+    <string name="text_external_storage_dialog_description">App need this functionality for saving picture and document
+        for your future reference purpose and many more beautiful functionalities.</string>
+    <string name="text_external_storage_description"> We need this permission to save your captured
+        images and videos to your SD-Card. If not allowed app may bloack this feature.</string>
+
+
+    <string name="rationale_camera">This app needs access to your camera so you can take pictures.</string>
+    <string name="returned_from_app_settings_to_activity">Returned from app settings to MainActivity</string>
+    <string name="rationale_title">Permission required</string>
+    <string name="rationale_message">we need permission for read <b>contact</b> and find your <b>location</b></string>
+    <!--permission text (End)-->
+
+
+    <string name="text_your_query">Type Your Query</string>
+    <string name="edt_text_business_name">Business Name</string>
+    <string name="edt_text_business_description">Business Description</string>
+    <string name="text_your_query_description">Description</string>
+    <string name="text_topbar_forgot_password">Forgot Password</string>
+    <string name="text_forgot_old_password">Old Password</string>
+    <string name="text_forgot_new_password">New Password</string>
+    <string name="text_forgot_confirm_new_password">Confirm New Password</string>
+    <string name="text_btn_forgot_password_send">Send</string>
+    <string name="text_edt_forgot_password_email">Registered Email</string>
+    <string name="text_btn_create_business">Create or Update Business</string>
+    <string name="text_btn_business_dashboard">Go To Business Dashboard</string>
+    <string name="text_btn_business_submit">Submit Business Detail</string>
+    <string name="text_btn_create_new_business">Create Business</string>
+    <string name="text_btn_update_business">Update</string>
+
+
+    <string name="attention">Attention</string>
+    <string name="messageperm">Attention this action needs your permission to run you access the settings?</string>
+    <string name="ok">OK</string>
+    <string name="text_change_main_business_image">Change your main image</string>
+    <string name="Rs">\u20B9</string>
+    <string name="valid_from">Validity From:</string>
+    <string name="available_from">Timing From:</string>
+    <string name="quantity_text">Quantity Valid:</string>
+    <string name="text_offer_price">Offer Price:</string>
+    <string name="text_regular_price">Regular Price:</string>
+    <string name="text_package_name">Package Name:</string>
+    <string name="text_package_detail">Package Detail:</string>
+    <string name="available_Days">Available Days:</string>
+    <string name="valid_to">To</string>
+    <string name="date">Date</string>
+    <string name="tv_text_available">Available:</string>
+    <string name="tv_text_available_status">Yes/No</string>
+    <string name="price">Price</string>
+
+    <string name="menu_edit_business">Edit Business</string>
+    <string name="menu_delete_all_business">Delete All Packages</string>
+    <string name="menu_add_package">Add Package</string>
+
+
+</resources>

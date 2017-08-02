@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:diagonal="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.florent37.diagonallayout.DiagonalLayout
+            android:layout_width="match_parent"
+            android:layout_height="266dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:elevation="10dp"
+            android:paddingBottom="16dp"
+            diagonal:diagonal_angle="10"
+            diagonal:diagonal_direction="left"
+            diagonal:diagonal_position="bottom">
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/kb_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/background" />
+
+            <com.haozhang.lib.SlantedTextView
+                android:id="@+id/stv_varify"
+                android:layout_width="@dimen/text_height"
+                android:layout_height="@dimen/text_height"
+                android:layout_alignEnd="@+id/kb_view"
+                android:layout_alignRight="@+id/kb_view"
+                android:layout_alignTop="@+id/kb_view"
+                android:layout_gravity="end"
+                android:gravity="center"
+                android:visibility="gone"
+                app:slantedBackgroundColor="@color/green"
+                app:slantedLength="@dimen/text_slanted"
+                app:slantedMode="right"
+                app:slantedText="@string/drawer_verified_status"
+                app:slantedTextColor="@color/white"
+                app:slantedTextSize="12sp" />
+
+            <com.haozhang.lib.SlantedTextView
+                android:id="@+id/stv_not_varify"
+                android:layout_width="@dimen/text_height"
+                android:layout_height="@dimen/text_height"
+                android:layout_alignEnd="@+id/kb_view"
+                android:layout_alignRight="@+id/kb_view"
+                android:layout_alignTop="@+id/kb_view"
+                android:layout_gravity="end"
+                android:gravity="center"
+                android:visibility="gone"
+                app:slantedBackgroundColor="@color/red_varification"
+                app:slantedLength="@dimen/text_slanted"
+                app:slantedMode="right"
+                app:slantedText="@string/drawer_not_verified_status"
+                app:slantedTextColor="@color/white"
+                app:slantedTextSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_merchant_dr_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="70dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Your Name"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="105dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_merchant_dr_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Your Email-id"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_merchant_dr_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Your Mobile Number"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </com.github.florent37.diagonallayout.DiagonalLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_dr_profile_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="190dp"
+            android:background="@drawable/ic_profile_image_bg"
+            android:elevation="15dp"
+            android:src="@drawable/ic_the_app_guru"
+            app:civ_border_color="@color/redlight"
+            app:civ_border_width="2dp" />
+
+
+        <View
+            android:id="@+id/vv_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/iv_dr_profile_image"
+            android:layout_marginTop="10dp"
+            android:background="@color/reddark" />
+
+
+        <!--My Profile (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_dr_profile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/vv_divider"
+            android:background="@drawable/drawable_list_item_click_effect">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_iv_profile"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_dr_profile" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/rl_iv_profile"
+                android:layout_toRightOf="@id/rl_iv_profile"
+                android:gravity="center_vertical"
+                android:text="My Profile"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <!--My Profile (End)-->
+
+
+        <!--My Order (End)-->
+        <RelativeLayout
+            android:id="@+id/rl_dr_my_orders"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/rl_dr_profile"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/drawable_list_item_click_effect">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_iv_my_oders"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_my_orders"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_dr_my_order" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_my_oders"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/rl_iv_my_oders"
+                android:layout_toRightOf="@id/rl_iv_my_oders"
+                android:gravity="center_vertical"
+                android:text="My Orders"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <!--My Order (Start)-->
+
+
+        <!--My Payment (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_dr_payment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/rl_dr_my_orders"
+            android:background="@drawable/drawable_list_item_click_effect">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_iv_payment"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_dr_payment" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/rl_iv_payment"
+                android:layout_toRightOf="@id/rl_iv_payment"
+                android:gravity="center_vertical"
+                android:text="My Payment"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <!--My Payment (End)-->
+
+
+        <!--My Notification (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_dr_notification"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/rl_dr_payment"
+            android:background="@drawable/drawable_list_item_click_effect">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_iv_notification"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_notification"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_dr_notification" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/rl_iv_notification"
+                android:layout_toRightOf="@id/rl_iv_notification"
+                android:gravity="center_vertical"
+                android:text="Notification"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <!--My Notification (End)-->
+
+
+        <!--My notification (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_dr_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/rl_dr_notification"
+            android:background="@drawable/drawable_list_item_click_effect">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_iv_feedback"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_dr_feedback" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/rl_iv_feedback"
+                android:layout_toRightOf="@id/rl_iv_feedback"
+                android:gravity="center_vertical"
+                android:text="Feedback"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <!--My notification (End)-->
+
+
+        <!--Rate us (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_dr_rate_us"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/rl_dr_feedback"
+            android:background="@drawable/drawable_list_item_click_effect">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_iv_rate_us"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_rate_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_dr_rate_us" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_rate_us"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/rl_iv_rate_us"
+                android:layout_toRightOf="@id/rl_iv_rate_us"
+                android:gravity="center_vertical"
+                android:text="Rate Us"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <!--Rate us (End)-->
+
+
+        <!--Refer and Earn (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_dr_refer_earn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/rl_dr_rate_us"
+            android:background="@drawable/drawable_list_item_click_effect"
+            android:visibility="gone">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_iv_refer_earn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_refer_earn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_dr_share_app" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_refer_earn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/rl_iv_refer_earn"
+                android:layout_toRightOf="@id/rl_iv_refer_earn"
+                android:gravity="center_vertical"
+                android:text="Refer and Earn"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <!--Refer and Earn (End)-->
+
+
+        <!--Help and Support (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_dr_help_support"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/rl_dr_refer_earn"
+            android:background="@drawable/drawable_list_item_click_effect">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_iv_help_support"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_help_support"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_dr_customer_service" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_help_support"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/rl_iv_help_support"
+                android:layout_toRightOf="@id/rl_iv_help_support"
+                android:gravity="center_vertical"
+                android:text="Help and Support"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <!--Help and Support (End)-->
+
+
+        <!--About Us (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_dr_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/rl_dr_help_support"
+            android:background="@drawable/drawable_list_item_click_effect"
+            android:visibility="gone">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_iv_about_us"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_about_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_dr_about_us" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_about_us"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/rl_iv_about_us"
+                android:layout_toRightOf="@id/rl_iv_about_us"
+                android:gravity="center_vertical"
+                android:text="About Us"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <!--About Us (End)-->
+
+
+        <!--Logout, About US, Privacy Policy, Version No. (Start) -->
+        <LinearLayout
+            android:id="@+id/rl_bottom_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/rl_dr_about_us"
+            android:layout_marginTop="20dp"
+            android:divider="?android:dividerHorizontal"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:weightSum="4">
+
+
+            <TextView
+                android:id="@+id/tv_terms_of_use"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="About Us"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+
+            <TextView
+                android:id="@+id/tv_privacy_policy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Privacy Policy"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+
+            <TextView
+                android:id="@+id/tv_logout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Logout"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="v. 1.0.01"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+
+        </LinearLayout>
+        <!--Logout, About US, Privacy Policy, Version No. (End) -->
+
+
+        <!--home (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_dr_order"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/drawable_list_item_click_effect"
+            android:visibility="gone">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_iv_order"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_dr_my_oder" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/rl_iv_order"
+                android:layout_toRightOf="@id/rl_iv_order"
+                android:gravity="center_vertical"
+                android:text="@string/drawer_my_order"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <!--home (End)-->
+
+
+        <!--My Business (Start)-->
+        <RelativeLayout
+            android:id="@+id/rl_dr_my_business"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/rl_dr_order"
+            android:background="@drawable/drawable_list_item_click_effect"
+            android:visibility="gone">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_iv_my_business"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_my_business"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_dr_my_business" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_my_business"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/rl_iv_my_business"
+                android:layout_toRightOf="@id/rl_iv_my_business"
+                android:gravity="center_vertical"
+                android:text="My Business"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <!--My Business (End)-->
+
+
+    </RelativeLayout>
+
+</ScrollView>

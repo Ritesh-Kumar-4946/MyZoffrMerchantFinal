@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_business_description_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_text_business_short_name"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <RelativeLayout
+            android:id="@+id/rl_text_description_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <EditText
+                android:id="@+id/etCounter_business_description"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/et_background"
+                android:ems="10"
+                android:gravity="top|center_vertical"
+                android:hint="Enter text"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:textSize="15sp" />
+
+
+            <com.wafflecopter.charcounttextview.CharCountTextView
+                android:id="@+id/tvCounter_business_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/etCounter_business_description"
+                app:exceededTextColor="@color/red"
+                app:maxCharacters="100" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_set_business_description"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_presse_effect_upload"
+            android:elevation="7dp"
+            android:shadowColor="#1499A8"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="5"
+            android:text="@string/text_set"
+            android:textAllCaps="false"
+            android:textColor="@color/whitee"
+            android:textSize="18sp"
+            android:theme="@style/Widget.AppCompat.Button.Colored" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
