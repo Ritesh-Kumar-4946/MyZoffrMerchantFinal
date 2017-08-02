@@ -49,6 +49,8 @@ public class LoginActivity extends AppCompatActivity {
     private static final String LOGIN_URL = "login?";
     private static final int TIME_DELAY = 2000;
 
+    /*please commit directory*/
+
 //    @BindView(R.id.til_user_login_email_id)
 //    TextInputLayout Til_user_login_email_id;
 //
